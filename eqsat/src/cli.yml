@@ -1,0 +1,7 @@
+name: semiring
+subcommands:
+    - extract:
+        about: Extract h given g.
+        args:
+            - G:
+                takes_value: true
