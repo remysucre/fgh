@@ -1,0 +1,4 @@
+database({arc(From: integer, To: integer)}).
+tc(X,X) <- arc(X,_).
+tc(X,Y) <- tc(X,Z), arc(Z,Y).
+cc(Y,min<X>) <- tc(X,Y).

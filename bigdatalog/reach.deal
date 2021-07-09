@@ -1,0 +1,4 @@
+database({arc(From: integer, To: integer)}).
+tc(X,Y) <- arc(X,Y).
+tc(X,Y) <- arc(X,Z), tc(Z,Y).
+reach(Y) <- tc(X,Y), X = 30.

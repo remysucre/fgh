@@ -1,0 +1,4 @@
+database({arc(From: integer, To: integer, D: integer)}).
+tc(X,D) <- arc(X,_,_), X = 30, D = 0.
+tc(X,D) <- tc(Y,D1), arc(Y,X,D2), D = D1 + D2.
+sssp(X,min<Y>) <- tc(X,Y).
